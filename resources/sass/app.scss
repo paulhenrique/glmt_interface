@@ -1,0 +1,13 @@
+
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// @import '~mdbootstrap/scss/mdb';  
+@import '_main';  
+@import '_sidenav';  
