@@ -17,11 +17,11 @@
 			<li class="nav-item">
 				<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
 			</li>
-			@if (Route::has('register'))
+			{{-- @if (Route::has('register'))
 			<li class="nav-item">
 				<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
 			</li>
-			@endif
+			@endif --}}
 			@else
 			
 			<li class="nav-item dropdown">
@@ -45,24 +45,12 @@
 				<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
 					{{ Auth::user()->name }} <span class="caret"></span>
 				</a>
-
 				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-					<a class=" p-3" href="#">
-						<div class="container">
-							<div class="row justify-content-center">
-								<div class="col-2 p-0">
-									<img class="fluid-img" src="{{asset('images/icons/house.svg')}}">
-								</div>
-								<div class="col-6 text-left pt-1 align-middle">
-									{{'Início'}}
-								</div>
-							</div>
-						</div>
-					</a>
-					<a class="dropdown-item" href="#"><i class="fas fa-home mr-1"></i> Minhas simulações</a>
-					<a class="dropdown-item" href="#"><i class="fas fa-home mr-1"></i> Configurações</a>
-					<a class="dropdown-item" href="#"><i class="fas fa-home mr-1"></i> Sobre o App</a>
-					<a class="dropdown-item" href="#"><i class="fas fa-home mr-1"></i> Suporte</a>
+					<a class="dropdown-item" href="#"><i class="material-icons">home</i> {{'Início'}}</a>
+					<a class="dropdown-item" href="#"><i class="material-icons">folder</i> Minhas simulações</a>
+					<a class="dropdown-item" href="#"><i class="material-icons">settings</i> Configurações</a>
+					<a class="dropdown-item" href="#"><i class="material-icons">touch_app</i> Sobre o App</a>
+					<a class="dropdown-item" href="#"><i class="material-icons">laptop</i> Suporte</a>
 					<a class="dropdown-item" href="{{ route('logout') }}"onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }} </a>
 
 					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

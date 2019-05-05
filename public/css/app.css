@@ -10662,13 +10662,32 @@ a.text-dark:focus {
   }
 }
 
+*::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+  width: 6px !important;
+  height: 6px !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+}
+
 body {
-  overflow-x: hidden;
+  overflow: hidden !important;
 }
 
 .wrapper {
+  overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
-  width: 100%;
+  position: fixed;
+  width: 16.6666666667% !important;
+  height: calc(100vh - 71px) !important;
   align-items: stretch;
   background: #312f2f;
   color: #fff;
@@ -10764,5 +10783,27 @@ body {
 .wrapper ul ul a {
   padding-left: 30px !important;
   background: #595959;
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: 0px 13px 53px -23px #00000094;
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+.dropdown-menu a {
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.dropdown-menu a:hover {
+  color: #3490dc;
+}
+
+.dropdown-menu a i {
+  padding-right: 0.3rem;
+  position: relative;
+  top: 0.3rem;
 }
 
